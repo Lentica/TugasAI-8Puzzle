@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.gbGoalState = new System.Windows.Forms.GroupBox();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn7 = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
-            this.gbStartRandom = new System.Windows.Forms.GroupBox();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.gbStartState = new System.Windows.Forms.GroupBox();
+            this.btnT0 = new System.Windows.Forms.Button();
             this.btnT8 = new System.Windows.Forms.Button();
             this.btnT7 = new System.Windows.Forms.Button();
             this.btnT6 = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.btnT3 = new System.Windows.Forms.Button();
             this.btnT2 = new System.Windows.Forms.Button();
             this.btnT1 = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
-            this.btnT0 = new System.Windows.Forms.Button();
             this.gbSolution = new System.Windows.Forms.GroupBox();
             this.btnS0 = new System.Windows.Forms.Button();
             this.btnS8 = new System.Windows.Forms.Button();
@@ -59,8 +59,9 @@
             this.btnS2 = new System.Windows.Forms.Button();
             this.btnS1 = new System.Windows.Forms.Button();
             this.gbMethod = new System.Windows.Forms.GroupBox();
-            this.rbMethod1 = new System.Windows.Forms.RadioButton();
+            this.rbMethod3 = new System.Windows.Forms.RadioButton();
             this.rbMethod2 = new System.Windows.Forms.RadioButton();
+            this.rbMethod1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelSteps = new System.Windows.Forms.Label();
@@ -70,13 +71,13 @@
             this.btnPrevStep = new System.Windows.Forms.Button();
             this.btnNextStep = new System.Windows.Forms.Button();
             this.gbProgress = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.labelTime = new System.Windows.Forms.Label();
-            this.rbMethod3 = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnSolve = new System.Windows.Forms.Button();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.gbGoalState.SuspendLayout();
-            this.gbStartRandom.SuspendLayout();
+            this.gbStartState.SuspendLayout();
             this.gbSolution.SuspendLayout();
             this.gbMethod.SuspendLayout();
             this.gbProgress.SuspendLayout();
@@ -84,87 +85,36 @@
             // 
             // gbGoalState
             // 
+            this.gbGoalState.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbGoalState.Controls.Add(this.btn0);
             this.gbGoalState.Controls.Add(this.btn8);
             this.gbGoalState.Controls.Add(this.btn7);
-            this.gbGoalState.Controls.Add(this.btn6);
-            this.gbGoalState.Controls.Add(this.btn5);
-            this.gbGoalState.Controls.Add(this.btn4);
             this.gbGoalState.Controls.Add(this.btn3);
             this.gbGoalState.Controls.Add(this.btn2);
+            this.gbGoalState.Controls.Add(this.btn6);
+            this.gbGoalState.Controls.Add(this.btn5);
             this.gbGoalState.Controls.Add(this.btn1);
-            this.gbGoalState.Location = new System.Drawing.Point(367, 134);
+            this.gbGoalState.Controls.Add(this.btn4);
+            this.gbGoalState.Location = new System.Drawing.Point(337, 68);
             this.gbGoalState.Name = "gbGoalState";
             this.gbGoalState.Size = new System.Drawing.Size(325, 341);
             this.gbGoalState.TabIndex = 0;
             this.gbGoalState.TabStop = false;
             this.gbGoalState.Text = "Goal State";
             // 
-            // btn1
+            // btn0
             // 
-            this.btn1.Location = new System.Drawing.Point(6, 19);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(100, 100);
-            this.btn1.TabIndex = 0;
-            this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
-            // 
-            // btn2
-            // 
-            this.btn2.Location = new System.Drawing.Point(112, 19);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(100, 100);
-            this.btn2.TabIndex = 1;
-            this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = true;
-            // 
-            // btn3
-            // 
-            this.btn3.Location = new System.Drawing.Point(218, 19);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(100, 100);
-            this.btn3.TabIndex = 2;
-            this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
-            // 
-            // btn4
-            // 
-            this.btn4.Location = new System.Drawing.Point(6, 125);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(100, 100);
-            this.btn4.TabIndex = 3;
-            this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
-            // 
-            // btn5
-            // 
-            this.btn5.Location = new System.Drawing.Point(112, 125);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(100, 100);
-            this.btn5.TabIndex = 4;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
-            // 
-            // btn6
-            // 
-            this.btn6.Location = new System.Drawing.Point(218, 125);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(100, 100);
-            this.btn6.TabIndex = 5;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
-            // 
-            // btn7
-            // 
-            this.btn7.Location = new System.Drawing.Point(6, 231);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(100, 100);
-            this.btn7.TabIndex = 6;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btn0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn0.Location = new System.Drawing.Point(6, 19);
+            this.btn0.Name = "btn0";
+            this.btn0.Size = new System.Drawing.Size(100, 100);
+            this.btn0.TabIndex = 8;
+            this.btn0.Text = "0";
+            this.btn0.UseVisualStyleBackColor = true;
             // 
             // btn8
             // 
+            this.btn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn8.Location = new System.Drawing.Point(218, 231);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(100, 100);
@@ -172,26 +122,108 @@
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
             // 
-            // gbStartRandom
+            // btn7
             // 
-            this.gbStartRandom.Controls.Add(this.btnT0);
-            this.gbStartRandom.Controls.Add(this.btnT8);
-            this.gbStartRandom.Controls.Add(this.btnT7);
-            this.gbStartRandom.Controls.Add(this.btnT6);
-            this.gbStartRandom.Controls.Add(this.btnT5);
-            this.gbStartRandom.Controls.Add(this.btnT4);
-            this.gbStartRandom.Controls.Add(this.btnT3);
-            this.gbStartRandom.Controls.Add(this.btnT2);
-            this.gbStartRandom.Controls.Add(this.btnT1);
-            this.gbStartRandom.Location = new System.Drawing.Point(36, 134);
-            this.gbStartRandom.Name = "gbStartRandom";
-            this.gbStartRandom.Size = new System.Drawing.Size(325, 341);
-            this.gbStartRandom.TabIndex = 8;
-            this.gbStartRandom.TabStop = false;
-            this.gbStartRandom.Text = "Start State Random";
+            this.btn7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn7.Location = new System.Drawing.Point(112, 231);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(100, 100);
+            this.btn7.TabIndex = 6;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = true;
+            // 
+            // btn3
+            // 
+            this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn3.Location = new System.Drawing.Point(6, 125);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(100, 100);
+            this.btn3.TabIndex = 2;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = true;
+            // 
+            // btn2
+            // 
+            this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn2.Location = new System.Drawing.Point(219, 19);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(100, 100);
+            this.btn2.TabIndex = 1;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = true;
+            // 
+            // btn6
+            // 
+            this.btn6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn6.Location = new System.Drawing.Point(6, 231);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(100, 100);
+            this.btn6.TabIndex = 5;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
+            // 
+            // btn5
+            // 
+            this.btn5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn5.Location = new System.Drawing.Point(218, 125);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(100, 100);
+            this.btn5.TabIndex = 4;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = true;
+            // 
+            // btn1
+            // 
+            this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn1.Location = new System.Drawing.Point(112, 19);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(100, 100);
+            this.btn1.TabIndex = 0;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = true;
+            // 
+            // btn4
+            // 
+            this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn4.Location = new System.Drawing.Point(112, 125);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(100, 100);
+            this.btn4.TabIndex = 3;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
+            // 
+            // gbStartState
+            // 
+            this.gbStartState.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbStartState.Controls.Add(this.btnT0);
+            this.gbStartState.Controls.Add(this.btnT8);
+            this.gbStartState.Controls.Add(this.btnT7);
+            this.gbStartState.Controls.Add(this.btnT6);
+            this.gbStartState.Controls.Add(this.btnT5);
+            this.gbStartState.Controls.Add(this.btnT4);
+            this.gbStartState.Controls.Add(this.btnT3);
+            this.gbStartState.Controls.Add(this.btnT2);
+            this.gbStartState.Controls.Add(this.btnT1);
+            this.gbStartState.Location = new System.Drawing.Point(6, 68);
+            this.gbStartState.Name = "gbStartState";
+            this.gbStartState.Size = new System.Drawing.Size(325, 341);
+            this.gbStartState.TabIndex = 8;
+            this.gbStartState.TabStop = false;
+            this.gbStartState.Text = "Start State";
+            // 
+            // btnT0
+            // 
+            this.btnT0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT0.Location = new System.Drawing.Point(6, 19);
+            this.btnT0.Name = "btnT0";
+            this.btnT0.Size = new System.Drawing.Size(100, 100);
+            this.btnT0.TabIndex = 9;
+            this.btnT0.Text = "0";
+            this.btnT0.UseVisualStyleBackColor = true;
             // 
             // btnT8
             // 
+            this.btnT8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnT8.Location = new System.Drawing.Point(218, 231);
             this.btnT8.Name = "btnT8";
             this.btnT8.Size = new System.Drawing.Size(100, 100);
@@ -201,7 +233,8 @@
             // 
             // btnT7
             // 
-            this.btnT7.Location = new System.Drawing.Point(6, 231);
+            this.btnT7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT7.Location = new System.Drawing.Point(112, 231);
             this.btnT7.Name = "btnT7";
             this.btnT7.Size = new System.Drawing.Size(100, 100);
             this.btnT7.TabIndex = 6;
@@ -210,7 +243,8 @@
             // 
             // btnT6
             // 
-            this.btnT6.Location = new System.Drawing.Point(218, 125);
+            this.btnT6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT6.Location = new System.Drawing.Point(6, 231);
             this.btnT6.Name = "btnT6";
             this.btnT6.Size = new System.Drawing.Size(100, 100);
             this.btnT6.TabIndex = 5;
@@ -219,7 +253,8 @@
             // 
             // btnT5
             // 
-            this.btnT5.Location = new System.Drawing.Point(112, 125);
+            this.btnT5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT5.Location = new System.Drawing.Point(218, 125);
             this.btnT5.Name = "btnT5";
             this.btnT5.Size = new System.Drawing.Size(100, 100);
             this.btnT5.TabIndex = 4;
@@ -228,7 +263,8 @@
             // 
             // btnT4
             // 
-            this.btnT4.Location = new System.Drawing.Point(6, 125);
+            this.btnT4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT4.Location = new System.Drawing.Point(112, 125);
             this.btnT4.Name = "btnT4";
             this.btnT4.Size = new System.Drawing.Size(100, 100);
             this.btnT4.TabIndex = 3;
@@ -237,7 +273,8 @@
             // 
             // btnT3
             // 
-            this.btnT3.Location = new System.Drawing.Point(218, 19);
+            this.btnT3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT3.Location = new System.Drawing.Point(6, 125);
             this.btnT3.Name = "btnT3";
             this.btnT3.Size = new System.Drawing.Size(100, 100);
             this.btnT3.TabIndex = 2;
@@ -246,7 +283,8 @@
             // 
             // btnT2
             // 
-            this.btnT2.Location = new System.Drawing.Point(112, 19);
+            this.btnT2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT2.Location = new System.Drawing.Point(219, 19);
             this.btnT2.Name = "btnT2";
             this.btnT2.Size = new System.Drawing.Size(100, 100);
             this.btnT2.TabIndex = 1;
@@ -255,33 +293,17 @@
             // 
             // btnT1
             // 
-            this.btnT1.Location = new System.Drawing.Point(6, 19);
+            this.btnT1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnT1.Location = new System.Drawing.Point(112, 19);
             this.btnT1.Name = "btnT1";
             this.btnT1.Size = new System.Drawing.Size(100, 100);
             this.btnT1.TabIndex = 0;
             this.btnT1.Text = "1";
             this.btnT1.UseVisualStyleBackColor = true;
             // 
-            // btn0
-            // 
-            this.btn0.Location = new System.Drawing.Point(112, 231);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(100, 100);
-            this.btn0.TabIndex = 8;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
-            // 
-            // btnT0
-            // 
-            this.btnT0.Location = new System.Drawing.Point(112, 231);
-            this.btnT0.Name = "btnT0";
-            this.btnT0.Size = new System.Drawing.Size(100, 100);
-            this.btnT0.TabIndex = 9;
-            this.btnT0.Text = "0";
-            this.btnT0.UseVisualStyleBackColor = true;
-            // 
             // gbSolution
             // 
+            this.gbSolution.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbSolution.Controls.Add(this.btnS0);
             this.gbSolution.Controls.Add(this.btnS8);
             this.gbSolution.Controls.Add(this.btnS7);
@@ -291,7 +313,7 @@
             this.gbSolution.Controls.Add(this.btnS3);
             this.gbSolution.Controls.Add(this.btnS2);
             this.gbSolution.Controls.Add(this.btnS1);
-            this.gbSolution.Location = new System.Drawing.Point(880, 134);
+            this.gbSolution.Location = new System.Drawing.Point(850, 68);
             this.gbSolution.Name = "gbSolution";
             this.gbSolution.Size = new System.Drawing.Size(325, 341);
             this.gbSolution.TabIndex = 9;
@@ -300,7 +322,8 @@
             // 
             // btnS0
             // 
-            this.btnS0.Location = new System.Drawing.Point(112, 231);
+            this.btnS0.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS0.Location = new System.Drawing.Point(6, 19);
             this.btnS0.Name = "btnS0";
             this.btnS0.Size = new System.Drawing.Size(100, 100);
             this.btnS0.TabIndex = 8;
@@ -309,6 +332,7 @@
             // 
             // btnS8
             // 
+            this.btnS8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnS8.Location = new System.Drawing.Point(218, 231);
             this.btnS8.Name = "btnS8";
             this.btnS8.Size = new System.Drawing.Size(100, 100);
@@ -318,7 +342,8 @@
             // 
             // btnS7
             // 
-            this.btnS7.Location = new System.Drawing.Point(6, 231);
+            this.btnS7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS7.Location = new System.Drawing.Point(112, 231);
             this.btnS7.Name = "btnS7";
             this.btnS7.Size = new System.Drawing.Size(100, 100);
             this.btnS7.TabIndex = 6;
@@ -327,7 +352,8 @@
             // 
             // btnS6
             // 
-            this.btnS6.Location = new System.Drawing.Point(218, 125);
+            this.btnS6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS6.Location = new System.Drawing.Point(6, 231);
             this.btnS6.Name = "btnS6";
             this.btnS6.Size = new System.Drawing.Size(100, 100);
             this.btnS6.TabIndex = 5;
@@ -336,7 +362,8 @@
             // 
             // btnS5
             // 
-            this.btnS5.Location = new System.Drawing.Point(112, 125);
+            this.btnS5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS5.Location = new System.Drawing.Point(219, 125);
             this.btnS5.Name = "btnS5";
             this.btnS5.Size = new System.Drawing.Size(100, 100);
             this.btnS5.TabIndex = 4;
@@ -345,7 +372,8 @@
             // 
             // btnS4
             // 
-            this.btnS4.Location = new System.Drawing.Point(6, 125);
+            this.btnS4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS4.Location = new System.Drawing.Point(112, 125);
             this.btnS4.Name = "btnS4";
             this.btnS4.Size = new System.Drawing.Size(100, 100);
             this.btnS4.TabIndex = 3;
@@ -354,7 +382,8 @@
             // 
             // btnS3
             // 
-            this.btnS3.Location = new System.Drawing.Point(218, 19);
+            this.btnS3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS3.Location = new System.Drawing.Point(6, 125);
             this.btnS3.Name = "btnS3";
             this.btnS3.Size = new System.Drawing.Size(100, 100);
             this.btnS3.TabIndex = 2;
@@ -363,7 +392,8 @@
             // 
             // btnS2
             // 
-            this.btnS2.Location = new System.Drawing.Point(112, 19);
+            this.btnS2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS2.Location = new System.Drawing.Point(218, 19);
             this.btnS2.Name = "btnS2";
             this.btnS2.Size = new System.Drawing.Size(100, 100);
             this.btnS2.TabIndex = 1;
@@ -372,7 +402,8 @@
             // 
             // btnS1
             // 
-            this.btnS1.Location = new System.Drawing.Point(6, 19);
+            this.btnS1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnS1.Location = new System.Drawing.Point(112, 19);
             this.btnS1.Name = "btnS1";
             this.btnS1.Size = new System.Drawing.Size(100, 100);
             this.btnS1.TabIndex = 0;
@@ -381,149 +412,20 @@
             // 
             // gbMethod
             // 
+            this.gbMethod.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbMethod.Controls.Add(this.rbMethod3);
             this.gbMethod.Controls.Add(this.rbMethod2);
             this.gbMethod.Controls.Add(this.rbMethod1);
-            this.gbMethod.Location = new System.Drawing.Point(42, 78);
+            this.gbMethod.Location = new System.Drawing.Point(6, 12);
             this.gbMethod.Name = "gbMethod";
             this.gbMethod.Size = new System.Drawing.Size(458, 50);
             this.gbMethod.TabIndex = 9;
             this.gbMethod.TabStop = false;
             this.gbMethod.Text = "gbMethod";
             // 
-            // rbMethod1
-            // 
-            this.rbMethod1.AutoSize = true;
-            this.rbMethod1.Location = new System.Drawing.Point(16, 19);
-            this.rbMethod1.Name = "rbMethod1";
-            this.rbMethod1.Size = new System.Drawing.Size(70, 17);
-            this.rbMethod1.TabIndex = 0;
-            this.rbMethod1.TabStop = true;
-            this.rbMethod1.Text = "Method 1";
-            this.rbMethod1.UseVisualStyleBackColor = true;
-            // 
-            // rbMethod2
-            // 
-            this.rbMethod2.AutoSize = true;
-            this.rbMethod2.Location = new System.Drawing.Point(188, 19);
-            this.rbMethod2.Name = "rbMethod2";
-            this.rbMethod2.Size = new System.Drawing.Size(70, 17);
-            this.rbMethod2.TabIndex = 1;
-            this.rbMethod2.TabStop = true;
-            this.rbMethod2.Text = "Method 2";
-            this.rbMethod2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(877, 494);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Number of steps:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(877, 520);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Number of iteration:";
-            // 
-            // labelSteps
-            // 
-            this.labelSteps.AutoSize = true;
-            this.labelSteps.Location = new System.Drawing.Point(970, 494);
-            this.labelSteps.Name = "labelSteps";
-            this.labelSteps.Size = new System.Drawing.Size(44, 13);
-            this.labelSteps.TabIndex = 12;
-            this.labelSteps.Text = "<steps>";
-            // 
-            // labelIteration
-            // 
-            this.labelIteration.AutoSize = true;
-            this.labelIteration.Location = new System.Drawing.Point(982, 520);
-            this.labelIteration.Name = "labelIteration";
-            this.labelIteration.Size = new System.Drawing.Size(56, 13);
-            this.labelIteration.TabIndex = 13;
-            this.labelIteration.Text = "<iteration>";
-            // 
-            // labelStepCount
-            // 
-            this.labelStepCount.AutoSize = true;
-            this.labelStepCount.Location = new System.Drawing.Point(946, 101);
-            this.labelStepCount.Name = "labelStepCount";
-            this.labelStepCount.Size = new System.Drawing.Size(69, 13);
-            this.labelStepCount.TabIndex = 15;
-            this.labelStepCount.Text = "<step count>";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(877, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Step Count:";
-            // 
-            // btnPrevStep
-            // 
-            this.btnPrevStep.Location = new System.Drawing.Point(880, 553);
-            this.btnPrevStep.Name = "btnPrevStep";
-            this.btnPrevStep.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevStep.TabIndex = 16;
-            this.btnPrevStep.Text = "Previous";
-            this.btnPrevStep.UseVisualStyleBackColor = true;
-            // 
-            // btnNextStep
-            // 
-            this.btnNextStep.Location = new System.Drawing.Point(973, 553);
-            this.btnNextStep.Name = "btnNextStep";
-            this.btnNextStep.Size = new System.Drawing.Size(75, 23);
-            this.btnNextStep.TabIndex = 17;
-            this.btnNextStep.Text = "Next";
-            this.btnNextStep.UseVisualStyleBackColor = true;
-            // 
-            // gbProgress
-            // 
-            this.gbProgress.Controls.Add(this.labelTime);
-            this.gbProgress.Controls.Add(this.progressBar1);
-            this.gbProgress.Controls.Add(this.label3);
-            this.gbProgress.Location = new System.Drawing.Point(36, 494);
-            this.gbProgress.Name = "gbProgress";
-            this.gbProgress.Size = new System.Drawing.Size(649, 166);
-            this.gbProgress.TabIndex = 18;
-            this.gbProgress.TabStop = false;
-            this.gbProgress.Text = "gbProgress";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Time:";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(58, 85);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(572, 23);
-            this.progressBar1.TabIndex = 1;
-            // 
-            // labelTime
-            // 
-            this.labelTime.AutoSize = true;
-            this.labelTime.Location = new System.Drawing.Point(94, 46);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(38, 13);
-            this.labelTime.TabIndex = 2;
-            this.labelTime.Text = "<time>";
-            // 
             // rbMethod3
             // 
+            this.rbMethod3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbMethod3.AutoSize = true;
             this.rbMethod3.Location = new System.Drawing.Point(367, 19);
             this.rbMethod3.Name = "rbMethod3";
@@ -533,21 +435,178 @@
             this.rbMethod3.Text = "Method 3";
             this.rbMethod3.UseVisualStyleBackColor = true;
             // 
+            // rbMethod2
+            // 
+            this.rbMethod2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbMethod2.AutoSize = true;
+            this.rbMethod2.Location = new System.Drawing.Point(188, 19);
+            this.rbMethod2.Name = "rbMethod2";
+            this.rbMethod2.Size = new System.Drawing.Size(70, 17);
+            this.rbMethod2.TabIndex = 1;
+            this.rbMethod2.TabStop = true;
+            this.rbMethod2.Text = "Method 2";
+            this.rbMethod2.UseVisualStyleBackColor = true;
+            // 
+            // rbMethod1
+            // 
+            this.rbMethod1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbMethod1.AutoSize = true;
+            this.rbMethod1.Location = new System.Drawing.Point(16, 19);
+            this.rbMethod1.Name = "rbMethod1";
+            this.rbMethod1.Size = new System.Drawing.Size(70, 17);
+            this.rbMethod1.TabIndex = 0;
+            this.rbMethod1.TabStop = true;
+            this.rbMethod1.Text = "Method 1";
+            this.rbMethod1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(847, 428);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Number of steps:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(847, 454);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Number of iteration:";
+            // 
+            // labelSteps
+            // 
+            this.labelSteps.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelSteps.AutoSize = true;
+            this.labelSteps.Location = new System.Drawing.Point(940, 428);
+            this.labelSteps.Name = "labelSteps";
+            this.labelSteps.Size = new System.Drawing.Size(44, 13);
+            this.labelSteps.TabIndex = 12;
+            this.labelSteps.Text = "<steps>";
+            // 
+            // labelIteration
+            // 
+            this.labelIteration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelIteration.AutoSize = true;
+            this.labelIteration.Location = new System.Drawing.Point(952, 454);
+            this.labelIteration.Name = "labelIteration";
+            this.labelIteration.Size = new System.Drawing.Size(56, 13);
+            this.labelIteration.TabIndex = 13;
+            this.labelIteration.Text = "<iteration>";
+            // 
+            // labelStepCount
+            // 
+            this.labelStepCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelStepCount.AutoSize = true;
+            this.labelStepCount.Location = new System.Drawing.Point(916, 35);
+            this.labelStepCount.Name = "labelStepCount";
+            this.labelStepCount.Size = new System.Drawing.Size(69, 13);
+            this.labelStepCount.TabIndex = 15;
+            this.labelStepCount.Text = "<step count>";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(847, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Step Count:";
+            // 
+            // btnPrevStep
+            // 
+            this.btnPrevStep.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrevStep.Location = new System.Drawing.Point(850, 487);
+            this.btnPrevStep.Name = "btnPrevStep";
+            this.btnPrevStep.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevStep.TabIndex = 16;
+            this.btnPrevStep.Text = "Previous";
+            this.btnPrevStep.UseVisualStyleBackColor = true;
+            // 
+            // btnNextStep
+            // 
+            this.btnNextStep.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNextStep.Location = new System.Drawing.Point(943, 487);
+            this.btnNextStep.Name = "btnNextStep";
+            this.btnNextStep.Size = new System.Drawing.Size(75, 23);
+            this.btnNextStep.TabIndex = 17;
+            this.btnNextStep.Text = "Next";
+            this.btnNextStep.UseVisualStyleBackColor = true;
+            // 
+            // gbProgress
+            // 
+            this.gbProgress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gbProgress.Controls.Add(this.labelTime);
+            this.gbProgress.Controls.Add(this.progressBar1);
+            this.gbProgress.Controls.Add(this.label3);
+            this.gbProgress.Location = new System.Drawing.Point(6, 428);
+            this.gbProgress.Name = "gbProgress";
+            this.gbProgress.Size = new System.Drawing.Size(649, 166);
+            this.gbProgress.TabIndex = 18;
+            this.gbProgress.TabStop = false;
+            this.gbProgress.Text = "gbProgress";
+            // 
+            // labelTime
+            // 
+            this.labelTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTime.AutoSize = true;
+            this.labelTime.Location = new System.Drawing.Point(94, 46);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(38, 13);
+            this.labelTime.TabIndex = 2;
+            this.labelTime.Text = "<time>";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.progressBar1.Location = new System.Drawing.Point(58, 85);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(572, 23);
+            this.progressBar1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(55, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Time:";
+            // 
             // btnSolve
             // 
+            this.btnSolve.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSolve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolve.Location = new System.Drawing.Point(732, 270);
+            this.btnSolve.Location = new System.Drawing.Point(702, 204);
             this.btnSolve.Name = "btnSolve";
             this.btnSolve.Size = new System.Drawing.Size(105, 78);
             this.btnSolve.TabIndex = 19;
             this.btnSolve.Text = "SOLVE";
             this.btnSolve.UseVisualStyleBackColor = true;
             // 
+            // rtbLog
+            // 
+            this.rtbLog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rtbLog.Location = new System.Drawing.Point(850, 516);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.ReadOnly = true;
+            this.rtbLog.Size = new System.Drawing.Size(402, 78);
+            this.rtbLog.TabIndex = 20;
+            this.rtbLog.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.rtbLog);
             this.Controls.Add(this.btnSolve);
             this.Controls.Add(this.gbProgress);
             this.Controls.Add(this.btnNextStep);
@@ -560,12 +619,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbMethod);
             this.Controls.Add(this.gbSolution);
-            this.Controls.Add(this.gbStartRandom);
+            this.Controls.Add(this.gbStartState);
             this.Controls.Add(this.gbGoalState);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbGoalState.ResumeLayout(false);
-            this.gbStartRandom.ResumeLayout(false);
+            this.gbStartState.ResumeLayout(false);
             this.gbSolution.ResumeLayout(false);
             this.gbMethod.ResumeLayout(false);
             this.gbMethod.PerformLayout();
@@ -588,7 +648,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.GroupBox gbStartRandom;
+        private System.Windows.Forms.GroupBox gbStartState;
         private System.Windows.Forms.Button btnT0;
         private System.Windows.Forms.Button btnT8;
         private System.Windows.Forms.Button btnT7;
@@ -625,6 +685,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbMethod3;
         private System.Windows.Forms.Button btnSolve;
+        private System.Windows.Forms.RichTextBox rtbLog;
     }
 }
 
