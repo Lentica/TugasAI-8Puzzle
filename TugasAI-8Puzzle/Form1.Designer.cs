@@ -522,7 +522,7 @@
             // btnPrevStep
             // 
             this.btnPrevStep.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrevStep.Location = new System.Drawing.Point(850, 487);
+            this.btnPrevStep.Location = new System.Drawing.Point(1033, 444);
             this.btnPrevStep.Name = "btnPrevStep";
             this.btnPrevStep.Size = new System.Drawing.Size(75, 23);
             this.btnPrevStep.TabIndex = 16;
@@ -532,7 +532,7 @@
             // btnNextStep
             // 
             this.btnNextStep.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNextStep.Location = new System.Drawing.Point(943, 487);
+            this.btnNextStep.Location = new System.Drawing.Point(1126, 444);
             this.btnNextStep.Name = "btnNextStep";
             this.btnNextStep.Size = new System.Drawing.Size(75, 23);
             this.btnNextStep.TabIndex = 17;
@@ -594,10 +594,10 @@
             // rtbLog
             // 
             this.rtbLog.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtbLog.Location = new System.Drawing.Point(850, 516);
+            this.rtbLog.Location = new System.Drawing.Point(850, 474);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(402, 78);
+            this.rtbLog.Size = new System.Drawing.Size(402, 195);
             this.rtbLog.TabIndex = 20;
             this.rtbLog.Text = "";
             // 
@@ -621,9 +621,11 @@
             this.Controls.Add(this.gbSolution);
             this.Controls.Add(this.gbStartState);
             this.Controls.Add(this.gbGoalState);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.gbGoalState.ResumeLayout(false);
             this.gbStartState.ResumeLayout(false);
             this.gbSolution.ResumeLayout(false);
