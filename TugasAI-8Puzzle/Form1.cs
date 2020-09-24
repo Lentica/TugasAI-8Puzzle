@@ -29,6 +29,7 @@ namespace TugasAI_8Puzzle
             InitializeComponent();
         }
 
+        //inisialisasi array puzzle
         private void initPuzzle()
         {
             int numCounter = 0;
@@ -36,11 +37,13 @@ namespace TugasAI_8Puzzle
             {
                 for (int j = 0; j < puzzleState.GetLength(1); j++)
                 {
+                    //isi array puzzleState dengan objek squareCoords baru dengan isi x,y 0 dan angka dari kotak
                     puzzleState[i, j] = new squareCoords(0, 0, numCounter);
                     numCounter++;
                 }
             }
 
+            //check untuk setiap button dalam gbSolution untuk button dengan nama yang mengandung angka dalam var temp
             int temp = 0;
             foreach (Button btn in gbSolution.Controls)
             {
@@ -49,6 +52,8 @@ namespace TugasAI_8Puzzle
                     temp++;
                 }
 
+                //copy property Left dan Top dari button yang match dengan angka dalam var temp
+                //ke dalam setiap objek yang ada dalam puzzleState
                 foreach (squareCoords coords in puzzleState)
                 {
                     if (coords.Number == temp)
@@ -64,6 +69,7 @@ namespace TugasAI_8Puzzle
                 temp = 0;
             }
 
+            //visualisasi array puzzleState sebagai sebuah 8 Puzzle
             for (int i = 0; i < puzzleState.GetLength(0); i++)
             {
                 rtbLog.Text += "                 ";
@@ -81,8 +87,10 @@ namespace TugasAI_8Puzzle
             startState = puzzleState;
         }
 
+        //visualisasi untuk setiap pergerakan yang dilakukan
         private void visualizeMove(squareCoords currSquare, squareCoords destSquare)
         {
+            //Visualisasi menggunakan button (bugged)
             foreach (Button btn in gbSolution.Controls)
             {
                 if (btn.Name.Contains(currSquare.Number.ToString()))
@@ -100,6 +108,7 @@ namespace TugasAI_8Puzzle
                 }
             }
 
+            //visualisasi menggunakan richtextbox
             for (int i = 0; i < puzzleState.GetLength(0); i++)
             {
                 rtbLog.Text += "                 ";
@@ -110,20 +119,26 @@ namespace TugasAI_8Puzzle
                 rtbLog.Text += "\n\n";
             }
             rtbLog.Text += "\n\n\n";
+            //set posisi cursor ke huruf terakhir dan scroll ke cursor tersebut
+            //digunakan agar rich text box auto scroll ke bagian visualisasi text.
             rtbLog.SelectionStart = rtbLog.Text.Length;
             rtbLog.ScrollToCaret();
         }
 
 
+        //Method yang digunakan untuk menggerakan square 0 dalam array puzzleState
+        //int direction -> 0=atas, 1=kanan, 2=bawah, 3=kiri
         private void move(int direction)
         {
+            //dokumentasi untuk method ini hanya ada pada direction==0 karena cara kerja sama pada yang lain.
             step++;
             labelStepCount.Text = step + "";
-            //0=atas, 1=kanan, 2=bawah, 3=kiri
             bool found = false;
             if (direction == 0)
             {//atas
 
+                //var temp untuk index objek yang memiliki Property 'Number'
+                //dengan value 0
                 int tempIndexI = 0, tempIndexJ = 0;
 
                 //cari square dengan angka 0 dalam array puzzleState
@@ -131,8 +146,10 @@ namespace TugasAI_8Puzzle
                 {
                     for (int j = 0; j < puzzleState.GetLength(1); j++)
                     {
+                        //check apakah setiap objek yang dilewati memiliki Number=0
                         if (puzzleState[i, j].Number == 0)
                         {
+                            //copy index nya lalu hentikan pencarian
                             found = true;
                             tempIndexI = i;
                             tempIndexJ = j;
@@ -145,9 +162,10 @@ namespace TugasAI_8Puzzle
                     }
                 }
 
-                //jika square dengan angka 0 ditemukan maka found=true
+                //jika square dengan Number=0 ditemukan maka found=true
                 if (found)
                 {
+                    //check apakah objek tersebut ada di row teratas (row 0)
                     if (tempIndexI == 0)
                     {
                         if (debug)
@@ -164,13 +182,17 @@ namespace TugasAI_8Puzzle
                     {
                         if (debug)
                         {
+                            //copy isi dari kotak yang sekarang
                             squareCoords tempCurrSquare = new squareCoords(puzzleState[tempIndexI, tempIndexJ].X, puzzleState[tempIndexI, tempIndexJ].Y, puzzleState[tempIndexI, tempIndexJ].Number);
 
+                            //copy isi dari kotak destinasi yang akan dipindah, karena ke atas maka index I (axis Y) di -1
                             squareCoords tempDestSquare = new squareCoords(puzzleState[tempIndexI - 1, tempIndexJ].X, puzzleState[tempIndexI - 1, tempIndexJ].Y, puzzleState[tempIndexI - 1, tempIndexJ].Number);
 
+                            //tukar isi dari objek tersebut
                             puzzleState[tempIndexI, tempIndexJ] = tempDestSquare;
                             puzzleState[tempIndexI - 1, tempIndexJ] = tempCurrSquare;
 
+                            //jalankan visualisasi
                             visualizeMove(tempCurrSquare, tempDestSquare);
                         }
                         else
