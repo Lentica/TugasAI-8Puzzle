@@ -590,6 +590,7 @@
             this.btnSolve.TabIndex = 19;
             this.btnSolve.Text = "SOLVE";
             this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
             // 
             // rtbLog
             // 

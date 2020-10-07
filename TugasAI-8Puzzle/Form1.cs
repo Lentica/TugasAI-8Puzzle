@@ -12,6 +12,7 @@ namespace TugasAI_8Puzzle
 {
     public partial class Form1 : Form
     {
+        Tree gameTree = new Tree();
         //Penggunaan class squareCoords
         //Puzzle state adalah state dari 8 puzzle yang ada pada groupBox "gbSolution"
         //Yang akan digunakan untuk checking state sekarang vs solution
@@ -384,6 +385,8 @@ namespace TugasAI_8Puzzle
         private void Form1_Load(object sender, EventArgs e)
         {
             initPuzzle();
+            //gameTree.exampleTreeArray();
+            //MessageBox.Show(gameTree.bfsTraverseArray());
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -406,6 +409,14 @@ namespace TugasAI_8Puzzle
                 {
                     move(3);
                 }
+            }
+        }
+
+        private void btnSolve_Click(object sender, EventArgs e)
+        {
+            if (rbMethod1.Checked)
+            {
+
             }
         }
     }
